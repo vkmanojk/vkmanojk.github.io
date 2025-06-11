@@ -82,7 +82,7 @@ Available commands:<br>
 <strong>VK Manojkumar</strong><br>
 Cybersecurity enthusiast<br>
 I aim to leverage my passion for cybersecurity and software engineering to build secure, scalable systems that protect data and empower users.<br>
-Email: <a href="mailto:vkmanojk@gmail.com" target="_blank">vkmanojk@example.com</a><br>
+Email: <a href="mailto:vkmanojk@gmail.com" target="_blank">vkmanojk@gmail.com</a><br>
 GitHub: <a href="https://github.com/vkmanojk" target="_blank">vkmanojk</a><br>
 LinkedIn: <a href="https://linkedin.com/in/vkmanojk" target="_blank">vkmanojk</a>
 `,
