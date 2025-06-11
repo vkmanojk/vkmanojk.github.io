@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Courier New', monospace;
+  height: 100vh;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #000;
+  color: #33ff33;
+}
+
+body.light {
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+canvas#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.terminal {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem;
+  border: 2px solid currentColor;
+  height: 90vh;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.85);
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+body.light .terminal {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#intro {
+  position: sticky;
+  top: 0;
+  background: inherit;
+  padding-bottom: 1rem;
+  z-index: 2;
+}
+
+.prompt {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#terminal-input {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  outline: none;
+  caret-color: currentColor;
+  flex-grow: 1;
+  min-width: 100px;
+}
+
+.output-line {
+  margin: 0.2rem 0;
+  animation: fadeIn 0.3s ease-in-out;
+  word-break: break-word;
+}
+
+.output-line span.file::after { content: ""; }
+.output-line span.dir::after  { content: "/"; }
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .terminal {
+    font-size: 0.9em;
+  }
+
+  #terminal-input {
+    font-size: 0.95em;
+  }
+}
