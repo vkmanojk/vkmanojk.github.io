@@ -1,50 +1,386 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vkmanojk@portfolio:~$</title>
-    <link rel="stylesheet" href="style.css" />
-    <script>
-        if (window.innerWidth <= 768) {
-            window.location.href = "gui.html";
-        }
-    </script>
 
-</head>
-<body class="dark">
-  <canvas id="bg-canvas"></canvas>
+    <meta
+      name="description"
+      content="Academic website of Manoj Kumar V K, PhD Scholar in Computer Science at IIT Hyderabad. Research interests include cybersecurity, post-quantum cryptography, and privacy-preserving technologies."
+    />
 
-  <div class="terminal" id="terminal">
-    <p style="text-align:right; font-size: 0.9em;">
-      <a href="gui.html">Switch to GUI Mode</a> |
-      <a href="#" onclick="toggleTheme()">Toggle Theme</a>
-    </p>
+    <meta
+      name="keywords"
+      content="Manoj Kumar V K, IIT Hyderabad, Cybersecurity, Post-Quantum Cryptography, Privacy, Cryptography, Computer Science"
+    />
 
-    <div id="intro">
-<pre>
+    <meta name="author" content="Manoj Kumar V K" />
 
- __  __                   _   _  __                           __     __  _  __
-|  \/  | __ _ _ __   ___ (_) | |/ /   _ _ __ ___   __ _ _ __  \ \   / / | |/ /
-| |\/| |/ _` | '_ \ / _ \| | | ' / | | | '_ ` _ \ / _` | '__|  \ \ / /  | ' / 
-| |  | | (_| | | | | (_) | | | . \ |_| | | | | | | (_| | |      \ V /   | . \ 
-|_|  |_|\__,_|_| |_|\___// | |_|\_\__,_|_| |_| |_|\__,_|_|       \_/    |_|\_\
-                       |__/                                                                                                                   
-                          vkmanojk@portfolio
-</pre>
-Welcome to my interactive terminal portfolio!<br>
-Type <code>help</code> to get started.
+    <title>Manoj Kumar V K</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="page-layout">
+      <!-- =====================================================
+             LEFT PROFILE / SIDEBAR
+             Fixed on desktop, normal flow on mobile
+        ====================================================== -->
+
+      <aside class="profile-sidebar">
+        <div class="profile-content">
+          <!-- Profile Photograph -->
+          <div class="profile-photo">
+            <img
+              src="assets/images/profile.jpg"
+              alt="Portrait of Manoj Kumar V K"
+            />
+          </div>
+
+          <!-- Name and Position -->
+          <div class="profile-header">
+            <h1>Manoj Kumar V K</h1>
+
+            <p class="profile-role">PhD Scholar in Computer Science</p>
+
+            <p class="profile-institution">
+              Indian Institute of Technology Hyderabad
+            </p>
+          </div>
+
+          <!-- Short Research Bio -->
+          <div class="profile-bio">
+            <p>
+              I am a PhD scholar in Computer Science at IIT Hyderabad. My
+              research interests lie broadly in cybersecurity, with a particular
+              interest in post-quantum cryptography and privacy-preserving
+              technologies.
+            </p>
+            <br><br>
+          </div>
+
+          <!-- Academic / Social Links -->
+          <nav class="profile-links" aria-label="Academic profiles">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar"
+              title="Google Scholar"
+            >
+              <i class="fa-brands fa-google-scholar"></i>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ORCID"
+              title="ORCID"
+            >
+              <i class="fa-brands fa-orcid"></i>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a
+              href="mailto:your-email@example.com"
+              aria-label="Email"
+              title="Email"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <!--
+                    CV - uncomment when ready
+
+                    <a
+                        href="assets/cv/Manoj_Kumar_VK_CV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="CV"
+                        title="CV"
+                    >
+                        <i class="fa-solid fa-file-lines"></i>
+                    </a>
+                    -->
+          </nav>
+
+          <!-- Sidebar Footer -->
+          <footer class="sidebar-footer">
+            <p>
+              &copy;
+              <span id="current-year">2026</span>
+              Manoj Kumar V K
+            </p>
+          </footer>
+        </div>
+      </aside>
+
+      <!-- =====================================================
+             RIGHT CONTENT
+             This is the main scrollable academic content
+        ====================================================== -->
+
+      <main class="main-content">
+        <!-- =================================================
+                 Publications
+            ================================================== -->
+
+        <section id="publications" class="content-section">
+          <h2>Publications</h2>
+
+          <!-- Published Work -->
+
+          <div class="content-group">
+            <h3 class="group-title">Published</h3>
+
+            <!-- Publication 1 -->
+
+            <article class="publication">
+              <p class="publication-title">
+                An Experimental Investigation on Unsupervised Text Summarization
+                for Customer Reviews
+              </p>
+
+              <p class="publication-authors">
+                <strong>Manoj Kumar V K</strong>, Senthilkumar Mathi, Xiao-Zhi
+                Gao
+              </p>
+
+              <p class="publication-venue">
+                <em>Procedia Computer Science</em>, 2023.
+              </p>
+
+              <div class="publication-links">
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S1877050923001473"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Paper
+                </a>
+              </div>
+            </article>
+
+            <!-- Publication 2 -->
+
+            <article class="publication">
+              <p class="publication-title">
+                A Hybrid Deep Learning Approach for Predicting the Spread of
+                COVID-19
+              </p>
+
+              <p class="publication-authors">
+                <strong>Manoj Kumar V K</strong>, N.M. Dhanya, P. Prakash
+              </p>
+
+              <p class="publication-venue">
+                <em> Intelligent Systems, Technologies and Applications </em>,
+                Springer, 2021.
+              </p>
+
+              <div class="publication-links">
+                <a
+                  href="https://link.springer.com/chapter/10.1007/978-981-16-0730-1_13"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Paper
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Manuscripts Under Review -->
+
+          <div class="content-group">
+            <h3 class="group-title">Manuscripts Under Review</h3>
+
+            <article class="publication">
+              <p class="publication-title">
+                Syntactic Anonymization Schemes for Preventing Template
+                Inversion in Vector Databases
+              </p>
+
+              <p class="publication-authors">
+                <strong>Manoj Kumar V K</strong>, Debanjan Sadhya
+              </p>
+
+              <p class="publication-venue">Manuscript under review, 2026.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- =================================================
+                 Education
+            ================================================== -->
+
+        <section id="education" class="content-section">
+          <h2>Education</h2>
+
+          <div class="education-list">
+            <!-- PhD -->
+
+            <article class="education-item">
+              <div class="education-year">July 2026 &ndash; Present</div>
+
+              <div class="education-details">
+                <h3>PhD in Computer Science and Engineering</h3>
+
+                <p class="institution">
+                  Indian Institute of Technology Hyderabad
+                </p>
+              </div>
+            </article>
+
+            <!-- M.Tech -->
+
+            <article class="education-item">
+              <div class="education-year">July 2024 &ndash; July 2026</div>
+
+              <div class="education-details">
+                <h3>M.Tech in Information and Cyber Security</h3>
+
+                <p class="institution">
+                  ABV-Indian Institute of Information Technology and Management
+                  Gwalior
+                </p>
+
+                <p class="achievement">Gold Medal &middot; CGPA: 10.0/10</p>
+              </div>
+            </article>
+
+            <!-- B.Tech -->
+
+            <article class="education-item">
+              <div class="education-year">May 2017 &ndash; July 2021</div>
+
+              <div class="education-details">
+                <h3>B.Tech in Computer Science and Engineering</h3>
+
+                <p class="institution">
+                  Amrita Vishwa Vidyapeetham, Coimbatore
+                </p>
+
+                <p class="achievement">
+                  CGPA: 9.40/10 &middot; Institute Rank: 10
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- =================================================
+                 Teaching
+            ================================================== -->
+
+        <section id="teaching" class="content-section">
+          <h2>Teaching</h2>
+
+          <div class="teaching-list">
+            <!-- ABV-IIITM -->
+
+            <article class="teaching-item">
+              <div class="teaching-header">
+                <div>
+                  <h3>Teaching Assistant</h3>
+
+                  <p class="institution">ABV-IIITM Gwalior</p>
+                </div>
+
+                <span class="teaching-year"> 2024 &ndash; 2026 </span>
+              </div>
+
+              <p class="teaching-description">
+                Conducted tutorials and laboratory sessions across several
+                undergraduate courses during my M.Tech.
+              </p>
+
+              <ul class="course-list">
+                <li>Data Structures and Algorithms</li>
+
+                <li>Software Engineering Lab</li>
+
+                <li>Fundamentals of Cryptography</li>
+
+                <li>Database Management Systems Lab</li>
+
+                <li>Data Structures Lab</li>
+
+                <li>Digital Forensics Lab</li>
+
+                <li>C Programming Lab</li>
+              </ul>
+            </article>
+
+            <!-- Amrita -->
+
+            <article class="teaching-item">
+              <div class="teaching-header">
+                <div>
+                  <h3>Teaching Assistant</h3>
+
+                  <p class="institution">
+                    Amrita Vishwa Vidyapeetham, Coimbatore
+                  </p>
+                </div>
+
+                <span class="teaching-year"> 2020 &ndash; 2021 </span>
+              </div>
+
+              <p class="teaching-description">
+                Conducted tutorials in Data Structures and Algorithms and
+                laboratory sessions in Computer Programming during the final
+                year of my B.Tech.
+              </p>
+            </article>
+
+            <!-- Outreach -->
+
+            <article class="teaching-item">
+              <div class="teaching-header">
+                <div>
+                  <h3>Educational Outreach</h3>
+
+                  <p class="institution">Volunteer Teaching</p>
+                </div>
+              </div>
+
+              <p class="teaching-description">
+                Volunteered in educational initiatives teaching school children
+                through non-profit organizations, including U&amp;I.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
     </div>
 
-    <div id="output"></div>
-
-    <div class="input-line">
-      <span class="prompt">vkmanojk@portfolio:~$</span>
-      <input type="text" id="terminal-input" autofocus autocomplete="off" />
-    </div>
-  </div>
-
-  <audio id="type-sound" src="assets/typing.mp3" preload="auto"></audio>
-  <script src="script.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

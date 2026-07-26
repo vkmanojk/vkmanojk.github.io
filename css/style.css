@@ -1,0 +1,902 @@
+/* =========================================================
+   Manoj Kumar V K — Academic Portfolio
+   Two-column academic layout
+========================================================= */
+
+/* ---------------------------------------------------------
+   1. Variables
+--------------------------------------------------------- */
+
+:root {
+  --bg: #ffffff;
+  --sidebar-bg: #f7f8fa;
+
+  --text: #20242a;
+  --text-secondary: #5d6470;
+  --text-light: #7b838e;
+
+  --accent: #1f4e79;
+  --accent-dark: #173a5c;
+  --accent-light: #eaf1f7;
+
+  --border: #e1e5e9;
+
+  --sidebar-width: 38%;
+  --content-max-width: 780px;
+
+  --transition: 0.2s ease;
+}
+
+/* ---------------------------------------------------------
+   2. Reset / Base
+--------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* ---------------------------------------------------------
+   3. Main Page Layout
+--------------------------------------------------------- */
+
+.page-layout {
+  display: grid;
+
+  grid-template-columns: minmax(350px, var(--sidebar-width)) minmax(0, 1fr);
+
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   LEFT PROFILE SIDEBAR
+========================================================= */
+
+.profile-sidebar {
+  height: 100vh;
+  height: 100dvh;
+
+  background: var(--sidebar-bg);
+
+  border-right: 1px solid var(--border);
+
+  overflow: hidden;
+}
+
+.profile-content {
+  width: min(76%, 400px);
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 32px 0 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   4. Profile Photograph
+--------------------------------------------------------- */
+
+.profile-photo {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 18px;
+}
+
+.profile-photo img {
+  width: 140px;
+  height: 165px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.04),
+    0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------------------------------------------------------
+   5. Profile Header
+--------------------------------------------------------- */
+
+.profile-header {
+  margin-bottom: 18px;
+
+  text-align: center;
+}
+
+.profile-header h1 {
+  margin-bottom: 7px;
+
+  color: var(--text);
+
+  font-size: 1.9rem;
+  line-height: 1.15;
+
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.profile-role {
+  margin-bottom: 4px;
+
+  color: var(--accent);
+
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.profile-institution {
+  color: var(--text-secondary);
+
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+/* ---------------------------------------------------------
+   6. Profile Bio
+--------------------------------------------------------- */
+
+.profile-bio {
+  width: 100%;
+  max-width: 370px;
+
+  margin: 0 auto 14px;
+
+  text-align: justify;
+}
+
+.profile-bio p {
+  color: var(--text-secondary);
+
+  font-size: 0.88rem;
+  line-height: 1.65;
+
+  text-align: justify;
+}
+
+/* ---------------------------------------------------------
+   7. Profile Links
+--------------------------------------------------------- */
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid var(--border);
+
+  text-align: center;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-secondary);
+
+  font-size: 1.25rem;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.profile-links a:hover {
+  color: var(--accent);
+
+  text-decoration: none;
+
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------
+   8. Sidebar Footer
+--------------------------------------------------------- */
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 15px;
+
+  text-align: center;
+}
+
+.sidebar-footer p {
+  color: var(--text-light);
+
+  font-size: 0.72rem;
+}
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.main-content {
+  height: 100vh;
+  height: 100dvh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
+
+  padding: 42px 55px 55px;
+}
+
+.main-content > * {
+  width: 100%;
+  max-width: var(--content-max-width);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------------------------------------------------------
+   9. Content Sections
+--------------------------------------------------------- */
+
+.content-section {
+  margin-bottom: 38px;
+  padding-bottom: 42px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 15px;
+
+  border-bottom: none;
+}
+
+.content-section > h2 {
+  position: relative;
+
+  margin-bottom: 25px;
+  padding-bottom: 9px;
+
+  color: var(--text);
+
+  font-size: 1.5rem;
+  line-height: 1.25;
+
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.content-section > h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 38px;
+  height: 3px;
+
+  background: var(--accent);
+}
+
+/* ---------------------------------------------------------
+   10. General Content Groups
+--------------------------------------------------------- */
+
+.content-group {
+  margin-bottom: 28px;
+}
+
+.content-group:last-child {
+  margin-bottom: 0;
+}
+
+.group-title {
+  margin-bottom: 14px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.84rem;
+  font-weight: 650;
+
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+}
+
+/* =========================================================
+   PUBLICATIONS
+========================================================= */
+
+.publication {
+  position: relative;
+
+  margin-bottom: 18px;
+  padding-left: 17px;
+
+  border-left: 2px solid var(--border);
+
+  transition: border-color var(--transition);
+}
+
+.publication:last-child {
+  margin-bottom: 0;
+}
+
+.publication:hover {
+  border-left-color: var(--accent);
+}
+
+.publication-title {
+  margin-bottom: 4px;
+
+  color: var(--text);
+
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.publication-authors {
+  margin-bottom: 2px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.88rem;
+}
+
+.publication-authors strong {
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+.publication-venue {
+  margin-bottom: 5px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.87rem;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.publication-links a {
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.publication-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.education-item {
+  display: grid;
+
+  grid-template-columns: 165px minmax(0, 1fr);
+
+  gap: 27px;
+}
+
+.education-year {
+  padding-top: 3px;
+
+  color: var(--text-light);
+
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.education-details {
+  position: relative;
+
+  padding-left: 20px;
+
+  border-left: 2px solid var(--border);
+}
+
+.education-details::before {
+  content: "";
+
+  position: absolute;
+
+  left: -6px;
+  top: 7px;
+
+  width: 10px;
+  height: 10px;
+
+  background: var(--accent);
+
+  border-radius: 50%;
+}
+
+.education-details h3 {
+  margin-bottom: 3px;
+
+  color: var(--text);
+
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.institution {
+  color: var(--text-secondary);
+
+  font-size: 0.89rem;
+  line-height: 1.5;
+}
+
+.achievement {
+  display: inline-block;
+
+  margin-top: 7px;
+  padding: 3px 8px;
+
+  color: var(--accent-dark);
+  background: var(--accent-light);
+
+  border-radius: 4px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TEACHING
+========================================================= */
+
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 23px;
+}
+
+.teaching-item {
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.teaching-item:last-child {
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+.teaching-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 8px;
+}
+
+.teaching-header h3 {
+  margin-bottom: 2px;
+
+  color: var(--text);
+
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.teaching-year {
+  flex-shrink: 0;
+
+  padding-top: 3px;
+
+  color: var(--text-light);
+
+  font-size: 0.82rem;
+}
+
+.teaching-description {
+  max-width: 720px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.89rem;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   11. Course Tags
+--------------------------------------------------------- */
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 11px;
+
+  list-style: none;
+}
+
+.course-list li {
+  padding: 4px 8px;
+
+  color: var(--text-secondary);
+  background: var(--sidebar-bg);
+
+  border: 1px solid var(--border);
+  border-radius: 4px;
+
+  font-size: 0.77rem;
+  line-height: 1.35;
+}
+
+/* ---------------------------------------------------------
+   12. Scrollbar
+--------------------------------------------------------- */
+
+.main-content {
+  scrollbar-width: thin;
+  scrollbar-color: #c5cbd2 transparent;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 7px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #c5cbd2;
+
+  border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #aeb5bd;
+}
+
+/* ---------------------------------------------------------
+   13. Text Selection
+--------------------------------------------------------- */
+
+::selection {
+  color: var(--text);
+  background: var(--accent-light);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+/* ---------------------------------------------------------
+   14. Smaller Laptops / Tablets
+--------------------------------------------------------- */
+
+@media (max-width: 1050px) {
+  :root {
+    --sidebar-width: 40%;
+    --content-max-width: 700px;
+  }
+
+  .page-layout {
+    grid-template-columns: minmax(320px, var(--sidebar-width)) minmax(0, 1fr);
+  }
+
+  .profile-content {
+    width: 80%;
+    padding-top: 28px;
+  }
+
+  .profile-photo img {
+    width: 135px;
+    height: 160px;
+  }
+
+  .profile-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .main-content {
+    padding: 38px 40px 50px;
+  }
+
+  .education-item {
+    grid-template-columns: 135px minmax(0, 1fr);
+
+    gap: 22px;
+  }
+}
+
+/* ---------------------------------------------------------
+   15. Mobile / Narrow Tablets
+--------------------------------------------------------- */
+
+@media (max-width: 800px) {
+  body {
+    overflow: auto;
+  }
+
+  .page-layout {
+    display: block;
+
+    height: auto;
+
+    overflow: visible;
+  }
+
+  /* Profile becomes page header */
+
+  .profile-sidebar {
+    height: auto;
+
+    overflow: visible;
+
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .profile-content {
+    width: min(88%, 650px);
+
+    height: auto;
+    min-height: auto;
+
+    padding: 40px 0 32px;
+
+    margin: 0 auto;
+  }
+
+  .profile-photo {
+    margin-bottom: 18px;
+  }
+
+  .profile-photo img {
+    width: 135px;
+    height: 160px;
+  }
+
+  .profile-header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-bio {
+    max-width: 550px;
+  }
+
+  .sidebar-footer {
+    margin-top: 25px;
+    padding-top: 0;
+  }
+
+  /* Main content becomes normal page */
+
+  .main-content {
+    width: min(88%, 650px);
+
+    height: auto;
+
+    margin: 0 auto;
+
+    padding: 42px 0 60px;
+
+    overflow: visible;
+  }
+
+  .content-section {
+    margin-bottom: 40px;
+    padding-bottom: 45px;
+  }
+}
+
+/* ---------------------------------------------------------
+   16. Phones
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .profile-content,
+  .main-content {
+    width: 88%;
+  }
+
+  .profile-content {
+    padding-top: 32px;
+  }
+
+  .profile-photo img {
+    width: 125px;
+    height: 150px;
+  }
+
+  .profile-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .profile-role {
+    font-size: 0.9rem;
+  }
+
+  .profile-institution {
+    font-size: 0.85rem;
+  }
+
+  .profile-bio p {
+    font-size: 0.87rem;
+  }
+
+  .profile-links {
+    gap: 7px 15px;
+  }
+
+  /* Sections */
+
+  .main-content {
+    padding-top: 38px;
+  }
+
+  .content-section {
+    margin-bottom: 35px;
+    padding-bottom: 38px;
+  }
+
+  .content-section > h2 {
+    margin-bottom: 25px;
+
+    font-size: 1.4rem;
+  }
+
+  /* Education */
+
+  .education-list {
+    gap: 26px;
+  }
+
+  .education-item {
+    display: block;
+  }
+
+  .education-year {
+    margin-bottom: 8px;
+  }
+
+  /* Teaching */
+
+  .teaching-header {
+    display: block;
+  }
+
+  .teaching-year {
+    display: block;
+
+    margin-top: 4px;
+  }
+
+  .course-list {
+    display: flex;
+  }
+}
+
+/* ---------------------------------------------------------
+   17. Very Small Phones
+--------------------------------------------------------- */
+
+@media (max-width: 400px) {
+  .profile-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .profile-photo img {
+    width: 115px;
+    height: 140px;
+  }
+
+  .profile-links {
+    gap: 6px 12px;
+  }
+
+  .profile-links a {
+    font-size: 0.8rem;
+  }
+
+  .publication {
+    padding-left: 14px;
+  }
+}
+
+/* ---------------------------------------------------------
+   18. Accessibility — Reduced Motion
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  .main-content {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
